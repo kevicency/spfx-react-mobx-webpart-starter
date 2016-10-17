@@ -8,7 +8,7 @@ import {
 } from '@microsoft/sp-webpart-base'
 
 import * as strings from 'helloWorldStrings'
-import HelloWorld, { IHelloWorldProps } from '../components/HelloWorld'
+import { HelloWorld, IHelloWorldProps } from '../../components/HelloWorld'
 
 export interface IHelloWorldWebPartProps {
   name: string
@@ -33,11 +33,10 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
       pages: [
         {
           header: {
-            name: strings.PropertyPaneName
+            description: strings.PropertyPaneDescription
           },
           groups: [
             {
-              groupName: strings.BasicGroupName,
               groupFields: [
                 PropertyPaneTextField('name', {
                   label: strings.NameFieldLabel

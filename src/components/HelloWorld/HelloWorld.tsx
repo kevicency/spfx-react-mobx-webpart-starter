@@ -1,12 +1,12 @@
 import * as React from 'react'
 
-import styles from './HelloWorld.scss'
+import styles from './HelloWorld.module.scss'
 
 export interface IHelloWorldProps {
   name: string
 }
 
-export default class HelloWorld extends React.Component<IHelloWorldProps, {}> {
+export class HelloWorld extends React.Component<IHelloWorldProps, {}> {
   public render(): JSX.Element {
     return (
       <div className={styles.container}>

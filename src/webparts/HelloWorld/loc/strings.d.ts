@@ -1,5 +1,5 @@
 declare interface IHelloWorldStrings {
-  PropertyPaneName: string
+  PropertyPaneDescription: string
   BasicGroupName: string
   NameFieldLabel: string
 }
