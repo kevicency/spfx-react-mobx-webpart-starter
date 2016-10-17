@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "/Users/kev/code/spfx-webpart-starter/.typings/whatwg-fetch/whatwg-fetch.d.ts",
+    "raw": "file:./.typings/whatwg-fetch/whatwg-fetch.d.ts",
+    "typings": "/Users/kev/code/spfx-webpart-starter/.typings/whatwg-fetch/whatwg-fetch.d.ts"
+  }
+}
