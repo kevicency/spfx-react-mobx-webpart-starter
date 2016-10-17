@@ -17,5 +17,7 @@
     "lib-amd": true,
     "lib": true,
     "temp": true
-  }
+  },
+
+  "tslint.configFile": "config/tslint.json"
 }
