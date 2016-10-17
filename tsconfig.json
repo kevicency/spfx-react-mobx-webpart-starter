@@ -7,5 +7,10 @@
     "declaration": true,
     "sourceMap": true,
     "moduleResolution": "node"
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "lib",
+    ".typings"
+  ]
 }

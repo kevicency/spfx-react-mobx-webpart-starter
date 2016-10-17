@@ -24,6 +24,7 @@
     "start": "gulp serve",
     "build": "gulp bundle",
     "clean": "gulp nuke",
-    "test": "gulp test"
+    "test": "gulp test",
+    "lint": "tslint --project tsconfig.json -c config/tslint.json"
   }
 }

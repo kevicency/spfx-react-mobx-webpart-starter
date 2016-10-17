@@ -1,7 +1,7 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "Description",
-    "BasicGroupName": "Group Name",
-    "DescriptionFieldLabel": "Description Field"
+    'PropertyPaneName': 'Name',
+    'BasicGroupName': 'Group Name',
+    'NameFieldLabel': 'Name Field'
   }
 });
