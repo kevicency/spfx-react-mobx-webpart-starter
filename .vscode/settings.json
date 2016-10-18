@@ -16,5 +16,5 @@
     "temp": true
   },
 
-  "tslint.configFile": "config/tslint.json"
+  "tslint.configFile": "./tslint.json"
 }

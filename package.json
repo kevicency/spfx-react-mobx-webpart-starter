@@ -25,6 +25,6 @@
     "build": "gulp bundle",
     "clean": "gulp nuke",
     "test": "gulp test",
-    "lint": "tslint --project tsconfig.json -c config/tslint.json"
+    "lint": "tslint --project tsconfig.json -c tslint.json -e '**/*.scss.ts'"
   }
 }
