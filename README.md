@@ -1,26 +1,18 @@
-## spfx-webpart-starter
+# spfx-webpart-starter
 
-This is where you include your web part docs.
+An opinionated spfx webpack starter project
 
-### Building the code
+## What is different from @microsoft/generator-sharepoint
 
-```bash
-git clone the repo
-npm i
-npm i -g gulp
-gulp
-```
+* TSLint config based on [tslint-config-standard](https://github.com/blakeembrey/tslint-config-standard)
+* Working TSLint in VS Code
+* TS Typings provided by [typings](https://github.com/typings/typings)
+* Slightly different src/ folder structure
 
-This package produces the following:
+## FAQs
 
-* lib/* commonjs components - this allows this package to be reused from other packages.
-* dist/* - a single bundle containing the components used for uploading to a cdn pointing a registered Sharepoint webpart library to.
-* example/* a test page that hosts all components in this package.
+### Why is this not a generator
+Because `@microsoft/generator-sharepoint` is not open source (yet) and I didn't feel like writing a new one from scratch
 
-### Build options
-
-gulp nuke - TODO
-gulp test - TODO
-gulp watch - TODO
-gulp build - TODO
-gulp deploy - TODO
+### Which preview release is this based on?
+Drop 5
