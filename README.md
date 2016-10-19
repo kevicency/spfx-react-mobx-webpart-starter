@@ -1,4 +1,4 @@
-# spfx-webpart-starter
+# spfx-react-redux-webpart-starter
 
 An opinionated spfx webpack starter project
 

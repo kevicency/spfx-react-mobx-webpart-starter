@@ -1,5 +1,6 @@
 {
-  "name": "spfx-webpart-starter",
+  "name": "spfx-react-redux-webpart-starter",
+
   "version": "0.0.1",
   "private": true,
   "engines": {
