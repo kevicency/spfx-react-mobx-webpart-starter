@@ -1,18 +1,17 @@
 # spfx-react-redux-webpart-starter
 
-An opinionated spfx webpack starter project
+A starter project for a [React](https://github.com/facebook/react) & [Redux](https://github.com/reactjs/redux) powered [spfx](https://github.com/SharePoint/sp-dev-docs) webpart.
 
-## What is different from @microsoft/generator-sharepoint
+![](https://gyazo.com/4f8a7dcdcfc1f3a601304ceba1be4d12)
 
-* TSLint config based on [tslint-config-standard](https://github.com/blakeembrey/tslint-config-standard)
-* Working TSLint in VS Code
-* TS Typings provided by [typings](https://github.com/typings/typings)
-* Slightly different src/ folder structure
+## Getting started
 
-## FAQs
+```
+git clone https://github.com/kmees/spfx-react-redux-webpart-starter
+cd spfx-react-redux-webpack-starter
+npm install
+npm start
+```
 
-### Why is this not a generator
-Because `@microsoft/generator-sharepoint` is not open source (yet) and I didn't feel like writing a new one from scratch
-
-### Which preview release is this based on?
-Drop 5
+## LICENSE
+This project is licensed under the terms of the [MIT License](https://github.com/kmees/sfpx-react-redux-webpart-starter/blob/master/LICENSE)
