@@ -1,12 +1,12 @@
 import * as React from 'react'
 
-import styles from './HelloWorld.module.scss'
+import styles from './Greeter.module.scss'
 
-export interface IHelloWorldProps {
+export interface IGreeterProps {
   name: string
 }
 
-export class HelloWorld extends React.Component<IHelloWorldProps, {}> {
+export default class Greeter extends React.Component<IGreeterProps, {}> {
   public render(): JSX.Element {
     return (
       <div className={styles.container}>

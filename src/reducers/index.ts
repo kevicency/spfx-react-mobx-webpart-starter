@@ -1,9 +1,13 @@
-export interface IState { }
+import { combineReducers, Reducer } from 'redux'
 
-const initialState: IState = { }
+import webpartReducer, { IWebpartState } from './webpart'
 
-const rootReducer = (state = initialState) => (
-  state
-)
+export interface IState {
+  webpart: IWebpartState
+ }
+
+const rootReducer: Reducer<IState> = combineReducers<IState>({
+  webpart: webpartReducer
+})
 
 export default rootReducer

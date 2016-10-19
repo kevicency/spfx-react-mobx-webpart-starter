@@ -10,13 +10,11 @@ import { Store } from 'redux'
 import { Provider } from 'react-redux'
 
 import * as strings from 'helloWorldStrings'
+import IHelloWorldWebPartProps from './IHelloWorldWebPartProps'
 import { IState} from '../../reducers'
+import { updateProperty } from '../../reducers/webpart'
 import configureStore from '../../configureStore'
-import { HelloWorld } from '../../components/HelloWorld'
-
-export interface IHelloWorldWebPartProps {
-  name: string
-}
+import HelloWorldContainer from '../../containers/HelloWorldContainer'
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   store: Store<IState>
@@ -24,13 +22,26 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
   public constructor(context: IWebPartContext) {
     super(context)
 
-    this.store = configureStore({})
+    // create the store in the onInit callback to ensure that the properties are loaded
+    this.onInit = () => {
+      this.store = configureStore({
+        webpart: {
+          properties: this.properties
+        }
+      })
+
+      return Promise.resolve(true)
+    }
+
+    this.onPropertyChanged = (propertyPath, oldValue, newValue) => {
+      this.store.dispatch(updateProperty(propertyPath, newValue))
+    }
   }
 
   public render(): void {
     const element = (
       <Provider store={this.store}>
-        <HelloWorld name={this.properties.name} />
+        <HelloWorldContainer />
       </Provider>
     )
 
