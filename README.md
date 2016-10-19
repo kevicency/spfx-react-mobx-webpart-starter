@@ -2,7 +2,7 @@
 
 A starter project for a [React](https://github.com/facebook/react) & [Redux](https://github.com/reactjs/redux) powered [spfx](https://github.com/SharePoint/sp-dev-docs) webpart.
 
-![](https://gyazo.com/4f8a7dcdcfc1f3a601304ceba1be4d12)
+![](https://i.gyazo.com/4f8a7dcdcfc1f3a601304ceba1be4d12.gif)
 
 ## Getting started
 
