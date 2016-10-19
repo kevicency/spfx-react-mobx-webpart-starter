@@ -1,4 +1,4 @@
-import IHelloWorldWebPartProps from '../webparts/HelloWorld/IHelloWorldWebPartProps'
+import IHelloWorldWebPartProps from '../webpart/IHelloWorldWebPartProps'
 import { assign } from 'lodash'
 
 export interface IWebpartState {

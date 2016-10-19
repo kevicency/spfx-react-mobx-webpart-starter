@@ -11,10 +11,10 @@ import { Provider } from 'react-redux'
 
 import * as strings from 'helloWorldStrings'
 import IHelloWorldWebPartProps from './IHelloWorldWebPartProps'
-import { IState} from '../../reducers'
-import { updateProperty } from '../../reducers/webpart'
-import configureStore from '../../configureStore'
-import HelloWorldContainer from '../../containers/HelloWorldContainer'
+import { IState} from '../reducers'
+import { updateProperty } from '../reducers/webpart'
+import configureStore from '../configureStore'
+import HelloWorldContainer from '../containers/HelloWorldContainer'
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   store: Store<IState>

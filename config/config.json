@@ -1,8 +1,8 @@
 {
   "entries": [
     {
-      "entry": "./lib/webparts/helloWorld/HelloWorldWebPart.js",
-      "manifest": "./src/webparts/helloWorld/HelloWorldWebPart.manifest.json",
+      "entry": "./lib/webpart/HelloWorldWebPart.js",
+      "manifest": "./src/webpart/HelloWorldWebPart.manifest.json",
       "outputPath": "./dist/hello-world.bundle.js"
     }
   ],
@@ -17,6 +17,6 @@
     "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js"
   },
   "localizedResources": {
-    "helloWorldStrings": "webparts/helloWorld/loc/{locale}.js"
+    "helloWorldStrings": "webpart/loc/{locale}.js"
   }
 }
