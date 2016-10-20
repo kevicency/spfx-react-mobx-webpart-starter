@@ -2,7 +2,14 @@
 
 A starter project for a [React](https://github.com/facebook/react) & [Redux](https://github.com/reactjs/redux) powered [spfx](https://github.com/SharePoint/sp-dev-docs) webpart.
 
-![](https://i.gyazo.com/4f8a7dcdcfc1f3a601304ceba1be4d12.gif)
+## Example: Webpart properties
+
+### Non-Reactive 
+
+![](https://i.gyazo.com/1981f22fa6a162931a29ce8dad9c2657.gif)
+
+### Reactive
+![](https://i.gyazo.com/729c4addf6c992513f8eb91a3fa0e302.gif)
 
 ## Getting started
 
