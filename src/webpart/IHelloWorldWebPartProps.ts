@@ -1,5 +1,5 @@
 interface IHelloWorldWebPartProps {
-  name: string,
+  name: string
   disableReactive?: boolean
 }
 

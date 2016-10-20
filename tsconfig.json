@@ -6,7 +6,8 @@
     "jsx": "react",
     "declaration": true,
     "sourceMap": true,
-    "moduleResolution": "node"
+    "moduleResolution": "node",
+    "experimentalDecorators": true
   },
   "exclude": [
     "node_modules",

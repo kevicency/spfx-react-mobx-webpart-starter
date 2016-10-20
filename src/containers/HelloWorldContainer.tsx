@@ -1,19 +1,13 @@
 import * as React from 'react'
-import { connect } from 'react-redux'
+import { observer } from 'mobx-react'
 
-import { IState } from '../reducers'
 import Greeter from '../components/Greeter'
 
-const mapStateToProps = (state: IState) => ({
-  name: state.webpart.properties.name,
-  reactive: !state.webpart.properties.disableReactive
-})
-
-const HelloWorldContainer = ({ name, reactive }) => (
+const HelloWorldContainer = ({ webpart: { properties } }) => (
   <div>
-    <Greeter name={name} />
-    <pre>{ JSON.stringify({ reactive }) }</pre>
+    <Greeter name={properties.name} />
+    <pre>{ JSON.stringify({ reactive: !properties.reativeDisabled }) }</pre>
   </div>
 )
 
-export default connect(mapStateToProps)(HelloWorldContainer)
+export default observer(HelloWorldContainer)
