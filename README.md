@@ -8,7 +8,7 @@ Currently not working with spfx workbench :(
 
 ```
 git clone https://github.com/kmees/spfx-react-mobx-webpart-starter
-cd spfx-react-redux-webpack-starter
+cd spfx-react-mobx-webpart-starter
 npm install
 npm start
 ```
