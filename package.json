@@ -1,5 +1,5 @@
 {
-  "name": "spfx-react-redux-webpart-starter",
+  "name": "spfx-react-mobx-webpart-starter",
   "version": "0.0.1",
   "private": true,
   "engines": {

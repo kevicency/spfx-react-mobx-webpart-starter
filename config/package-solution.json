@@ -1,10 +1,10 @@
 {
   "solution": {
-    "name": "spfx-react-redux-webpart-starter-client-side-solution",
+    "name": "spfx-react-mobx-webpart-starter-client-side-solution",
     "id": "8b646641-4bc4-424d-883e-c3d68b7e2a68",
     "version": "1.0.0.0"
   },
   "paths": {
-    "zippedPackage": "solution/spfx-react-redux-webpart-starter.spapp"
+    "zippedPackage": "solution/spfx-react-mobx-webpart-starter.spapp"
   }
 }

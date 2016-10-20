@@ -1,6 +1,6 @@
 {
   "workingDir": "./temp/deploy/",
   "account": "<!-- STORAGE ACCOUNT NAME -->",
-  "container": "spfx-react-redux-webpart-starter",
+  "container": "spfx-react-mobx-webpart-starter",
   "accessKey": "<!-- ACCESS KEY -->"
 }

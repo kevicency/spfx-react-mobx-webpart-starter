@@ -1,20 +1,13 @@
-# spfx-react-redux-webpart-starter
+# spfx-react-mobx-webpart-starter
 
-A starter project for a [React](https://github.com/facebook/react) & [Redux](https://github.com/reactjs/redux) powered [spfx](https://github.com/SharePoint/sp-dev-docs) webpart.
+A starter project for a [React](https://github.com/facebook/react) & [Mobx](https://github.com/mobxjs/mobx) powered [spfx](https://github.com/SharePoint/sp-dev-docs) webpart.
 
-## Example: Webpart properties
+##
 
-### Non-Reactive 
-
-![](https://i.gyazo.com/1981f22fa6a162931a29ce8dad9c2657.gif)
-
-### Reactive
-![](https://i.gyazo.com/729c4addf6c992513f8eb91a3fa0e302.gif)
-
-## Getting started
+Currently not working with spfx workbench :(
 
 ```
-git clone https://github.com/kmees/spfx-react-redux-webpart-starter
+git clone https://github.com/kmees/spfx-react-mobx-webpart-starter
 cd spfx-react-redux-webpack-starter
 npm install
 npm start

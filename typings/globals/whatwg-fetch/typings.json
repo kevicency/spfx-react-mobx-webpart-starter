@@ -1,8 +1,8 @@
 {
   "resolution": "main",
   "tree": {
-    "src": "/Users/kev/code/spfx-react-redux-webpart-starter/.typings/whatwg-fetch/whatwg-fetch.d.ts",
+    "src": "/Users/kev/code/spfx-react-mobx-webpart-starter/.typings/whatwg-fetch/whatwg-fetch.d.ts",
     "raw": "file:./.typings/whatwg-fetch/whatwg-fetch.d.ts",
-    "typings": "/Users/kev/code/spfx-react-redux-webpart-starter/.typings/whatwg-fetch/whatwg-fetch.d.ts"
+    "typings": "/Users/kev/code/spfx-react-mobx-webpart-starter/.typings/whatwg-fetch/whatwg-fetch.d.ts"
   }
 }
