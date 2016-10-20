@@ -1,5 +1,6 @@
 interface IHelloWorldWebPartProps {
-  name: string
+  name: string,
+  disableReactive?: boolean
 }
 
 export default IHelloWorldWebPartProps

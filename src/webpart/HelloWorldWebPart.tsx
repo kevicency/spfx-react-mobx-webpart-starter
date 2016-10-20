@@ -12,7 +12,7 @@ import { Provider } from 'react-redux'
 import * as strings from 'helloWorldStrings'
 import IHelloWorldWebPartProps from './IHelloWorldWebPartProps'
 import { IState} from '../reducers'
-import { updateProperty, initProperties } from '../reducers/webpart'
+import { updateProperty, applyProperties } from '../reducers/webpart'
 import configureStore from '../configureStore'
 import HelloWorldContainer from '../containers/HelloWorldContainer'
 
@@ -23,9 +23,12 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     super(context)
 
      this.store = configureStore()
+
   }
 
   public render(): void {
+    if (this.renderedOnce) { return }
+
     const element = (
       <Provider store={this.store}>
         <HelloWorldContainer />
@@ -35,14 +38,24 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     ReactDom.render(element, this.domElement)
   }
 
+  protected get disableReactivePropertyChanges() {
+    return this.properties ? this.properties.disableReactive : false
+  }
+
   protected onPropertyChanged(propertyPath, oldValue, newValue) {
-    this.store.dispatch(updateProperty(propertyPath, newValue))
+    if (!this.disableReactivePropertyChanges) {
+      this.store.dispatch(updateProperty(propertyPath, newValue))
+    }
   }
 
   protected onInit() {
-    this.store.dispatch(initProperties(this.properties))
+    this.store.dispatch(applyProperties(this.properties))
 
     return Promise.resolve(true)
+  }
+
+  protected onAfterPropertyPaneChangesApplied() {
+    this.store.dispatch(applyProperties(this.properties))
   }
 
   protected get propertyPaneSettings(): IPropertyPaneSettings {

@@ -1,7 +1,7 @@
 {
   "$schema": "../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
 
-  "id": "99a4863e-95e8-4083-8822-8ad495872510",
+  "id": "3d95a4ef-a011-4823-a397-1803aeb2861d",
   "componentType": "WebPart",
   "version": "0.0.1",
   "manifestVersion": 2,
@@ -9,11 +9,11 @@
   "preconfiguredEntries": [{
     "groupId": "99a4863e-95e8-4083-8822-8ad495872510",
     "group": { "default": "Under Development" },
-    "title": { "default": "HelloWorld" },
+    "title": { "default": "HelloWorld Non-Reactive" },
     "description": { "default": "React Redux Webpart" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "HelloWorld"
+      "disableReactive": true
     }
   }]
 }

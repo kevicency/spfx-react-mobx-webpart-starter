@@ -5,11 +5,15 @@ import { IState } from '../reducers'
 import Greeter from '../components/Greeter'
 
 const mapStateToProps = (state: IState) => ({
-  name: state.webpart.properties.name
+  name: state.webpart.properties.name,
+  reactive: !state.webpart.properties.disableReactive
 })
 
-const HelloWorldContainer = ({ name }) => (
-  <Greeter name={name} />
+const HelloWorldContainer = ({ name, reactive }) => (
+  <div>
+    <Greeter name={name} />
+    <pre>{ JSON.stringify({ reactive }) }</pre>
+  </div>
 )
 
 export default connect(mapStateToProps)(HelloWorldContainer)

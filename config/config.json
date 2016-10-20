@@ -2,7 +2,12 @@
   "entries": [
     {
       "entry": "./lib/webpart/HelloWorldWebPart.js",
-      "manifest": "./src/webpart/HelloWorldWebPart.manifest.json",
+      "manifest": "./src/webpart/HelloWorldWebPart.reactive.manifest.json",
+      "outputPath": "./dist/hello-world.bundle.js"
+    },
+    {
+      "entry": "./lib/webpart/HelloWorldWebPart.js",
+      "manifest": "./src/webpart/HelloWorldWebPart.nonreactive.manifest.json",
       "outputPath": "./dist/hello-world.bundle.js"
     }
   ],

@@ -6,18 +6,18 @@ export interface IWebpartState {
 }
 
 export const UPDATE_PROPERTY = 'webpart/UPDATE_PROPERTY'
-export const INIT_PROPERTIES = 'webpart/INIT_PROPERTIES'
+export const APPLY_PROPERTIES = 'webpart/APPLY_PROPERTIES'
 
 export interface IUpdatePropertyAction {
   type: 'webpart/UPDATE_PROPERTY' // TODO is there a way to use the const?
   propertyName: string,
   value: any
 }
-export interface IInitPropertiesAction {
-  type: 'webpart/INIT_PROPERTIES' // TODO is there a way to use the const?
+export interface IApplyPropertiesAction {
+  type: 'webpart/APPLY_PROPERTIES' // TODO is there a way to use the const?
   properties: IHelloWorldWebPartProps
 }
-export type IWebpartAction = IUpdatePropertyAction | IInitPropertiesAction
+export type IWebpartAction = IUpdatePropertyAction | IApplyPropertiesAction
 
 export const initialState: IWebpartState = {
   properties: { name: '' }
@@ -31,7 +31,7 @@ export default (state = initialState, action: IWebpartAction) => {
           [action.propertyName]: action.value
         })
       })
-    case 'webpart/INIT_PROPERTIES':
+    case 'webpart/APPLY_PROPERTIES':
       return assign({}, state, {
         properties: action.properties
       })
@@ -44,7 +44,6 @@ export function updateProperty(propertyName: string, value: any) {
   return { type: UPDATE_PROPERTY, propertyName, value }
 }
 
-export function initProperties(properties: IHelloWorldWebPartProps) {
-  return { type: INIT_PROPERTIES, properties }
+export function applyProperties(properties: IHelloWorldWebPartProps) {
+  return { type: APPLY_PROPERTIES, properties }
 }
-
