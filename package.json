@@ -13,7 +13,7 @@
     "@types/react": "^0.14.41",
     "@types/react-dom": "^0.14.18",
     "lodash": "^4.16.4",
-    "mobx": "^2.6.0",
+    "mobx": "^2.6.0-fix621",
     "mobx-react": "^3.5.8",
     "office-ui-fabric-react": "0.36.0",
     "react": "0.14.8",
