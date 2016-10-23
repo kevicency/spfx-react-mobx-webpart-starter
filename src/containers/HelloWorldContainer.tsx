@@ -5,7 +5,7 @@ import Greeter from '../components/Greeter'
 
 const HelloWorldContainer = ({ webpart: { properties } }) => (
   <div>
-    <Greeter name={properties.name} />
+    <Greeter name={properties.get('name')} />
     <pre>{ JSON.stringify({ reactive: !properties.reativeDisabled }) }</pre>
   </div>
 )
