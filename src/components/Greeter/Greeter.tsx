@@ -3,7 +3,7 @@ import * as React from 'react'
 import styles from './Greeter.module.scss'
 
 export interface IGreeterProps {
-  name: string
+  name: React.ReactNode
 }
 
 export default class Greeter extends React.Component<IGreeterProps, {}> {

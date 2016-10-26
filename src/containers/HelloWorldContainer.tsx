@@ -1,10 +1,15 @@
 import * as React from 'react'
-import { observer } from 'mobx-react'
+import { observer, inject } from 'mobx-react'
 import { whyRun } from 'mobx'
 
+import { WebpartStore } from '../store'
 import Greeter from '../components/Greeter'
 
-const HelloWorldContainer = ({ webpart: { properties } }) => (
+interface IHelloWorldContainerProps {
+  webpart: WebpartStore
+}
+
+const HelloWorldContainer = ({ webpart: { properties } }: IHelloWorldContainerProps) => (
   <div>
     { console.log(whyRun()) }
     <Greeter name={properties.get('name')} />
@@ -12,4 +17,6 @@ const HelloWorldContainer = ({ webpart: { properties } }) => (
   </div>
 )
 
-export default observer(HelloWorldContainer)
+export default inject(store => ({
+  webpart: store.webpart as WebpartStore
+}))(observer(HelloWorldContainer))

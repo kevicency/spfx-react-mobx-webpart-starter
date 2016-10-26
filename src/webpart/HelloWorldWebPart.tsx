@@ -6,18 +6,13 @@ import {
   IWebPartContext,
   PropertyPaneTextField
 } from '@microsoft/sp-webpart-base'
-import { observable, ObservableMap } from 'mobx'
+
+import { Provider } from 'mobx-react'
+import Store from '../store'
 
 import * as strings from 'helloWorldStrings'
 import IHelloWorldWebPartProps from './IHelloWorldWebPartProps'
 import HelloWorldContainer from '../containers/HelloWorldContainer'
-
-export class WebpartStore {
-  @observable properties = new ObservableMap()
-}
-export class Store {
-  @observable webpart = new WebpartStore()
-}
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
   store = new Store()
@@ -30,7 +25,9 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
     if (this.renderedOnce) { return }
 
     const element = (
-      <HelloWorldContainer webpart={this.store.webpart} />
+      <Provider {...this.store}>
+        <HelloWorldContainer />
+      </Provider>
     )
 
     ReactDom.render(element, this.domElement)
